@@ -1,22 +1,26 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 
 
-// Get route example
-Route::get('/', function () {
-    return view('home');
-})->name("home");
+// View method and pass the array
+Route::view('/', "home", ['name' => 'Bishal koirala.'])->name("home");
 
-// Get route example
-Route::get('/about', function () {
-    return view('about');
-})->name("about");
 
-// Get contact route
-Route::get('/contact', function() {
-    return view('contact');
-})->name("contact");
+// Required parameter
+Route::get('/login/{user_id}', function($user_id) {
+    return ($user_id);
+})->where('user_id', '[0-9]+')->name("login");
 
+// Route group
+Route::prefix("user")->middleware("guest")->group(function () {
+    Route::view('/users', "users", ['name' => 'Bishal koirala.'])->name("users");
+});
+
+// route create
+Route::get("search", function(Request $request) {
+    dd($request->q);
+});
 

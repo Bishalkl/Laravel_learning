@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is a home Page</h1>
+    <h1>This is a user Page</h1>
     {{$slot}}
 </body>
 </html>
