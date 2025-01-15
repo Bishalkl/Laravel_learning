@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
-    <h1>This is a home Page</h1>
-    {{$slot}}
+    <h1>This is home page</h1>
 </body>
 </html>

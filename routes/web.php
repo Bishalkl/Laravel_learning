@@ -1,26 +1,8 @@
 <?php
-
-use Illuminate\Http\Request;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/login', AuthController::class);
 
-
-// View method and pass the array
-Route::view('/', "home", ['name' => 'Bishal koirala.'])->name("home");
-
-
-// Required parameter
-Route::get('/login/{user_id}', function($user_id) {
-    return ($user_id);
-})->where('user_id', '[0-9]+')->name("login");
-
-// Route group
-Route::prefix("user")->middleware("guest")->group(function () {
-    Route::view('/users', "users", ['name' => 'Bishal koirala.'])->name("users");
-});
-
-// route create
-Route::get("search", function(Request $request) {
-    dd($request->q);
-});
-
+Route::resource("blog", BlogController::class);
