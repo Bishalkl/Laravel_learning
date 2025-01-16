@@ -6,8 +6,11 @@ use Illuminate\Http\Request;
 
 class AuthController extends Controller
 {
-    public function __invoke()
-    {
-        return "This is invoked";
+    public function login () {
+        return view("auth.login");
+    }
+
+    public function home () {
+        return view("home");
     }
 }
