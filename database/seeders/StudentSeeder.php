@@ -14,20 +14,21 @@ class StudentSeeder extends Seeder
      */
     public function run(): void
     {
-        $json = File::get(path:'database/json/students.json');
-        $students = collect(json_decode($json));
+        // $json = File::get(path:'database/json/students.json');
+        // $students = collect(json_decode($json));
 
-        $students->each(function($student){
+        // $students->each(function($student){
+        //     student::create([
+        //         'name' => $student->name,
+        //         'email' => $student->email
+        //     ]);
+        // });
+
+        for($i = 1; $i<=10; $i++) {
             student::create([
-                'name' => $student->name,
-                'email' => $student->email
-            ]);
-        });
-
-        // for fake data
-        // student::create([
-        //     'name' => fake()->name(),
-        //     'email' => fake()->email()
-        //  ]);
+                'name' => fake()->name(),
+                'email' => fake()->email()
+             ]);
+        }
     }
 }
