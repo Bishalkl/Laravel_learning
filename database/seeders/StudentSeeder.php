@@ -23,5 +23,11 @@ class StudentSeeder extends Seeder
                 'email' => $student->email
             ]);
         });
+
+        // for fake data
+        // student::create([
+        //     'name' => fake()->name(),
+        //     'email' => fake()->email()
+        //  ]);
     }
 }
