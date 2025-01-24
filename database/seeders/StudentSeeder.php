@@ -9,9 +9,6 @@ use Illuminate\Support\Facades\File;
 
 class StudentSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
         $json = File::get(path:'database/json/students.json');
