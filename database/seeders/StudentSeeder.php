@@ -27,3 +27,5 @@ class StudentSeeder extends Seeder
         });
     }
 }
+
+

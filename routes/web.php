@@ -1,8 +1,10 @@
 <?php
-use App\Http\Controllers\AuthController;
-use App\Http\Controllers\BlogController;
+
+use App\Http\Controllers\StudentController;
 use Illuminate\Support\Facades\Route;
 
-route::get('/', function (){
-    return "Hello world";
-});
+// route::get('/', function (){
+//     return "Hello world";
+// });
+
+Route::get('/', [StudentController::class, 'showStudents']);
