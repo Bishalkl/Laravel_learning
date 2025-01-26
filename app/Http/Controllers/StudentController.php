@@ -14,6 +14,7 @@ class StudentController extends Controller
         return view('allstudents', ['data' => $students]);
     }
 
+
     public function singleStudents(string $id) {
         $students = DB::table('students')->where('id', $id)->get();
         return view('singleStudents', ['data' => $students]);
