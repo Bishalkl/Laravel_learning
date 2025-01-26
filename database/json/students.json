@@ -1,42 +1,62 @@
 [
     {
-        "name": "Bishal Koirala",
-        "email": "BishalKoirala123@gmail.com"
+        "name": "John Doe",
+        "email": "johndoe@example.com",
+        "age": 30,
+        "city": "New York"
     },
     {
-        "name": "Anita Shrestha",
-        "email": "AnitaShrestha456@gmail.com"
+        "name": "Jane Smith",
+        "email": "janesmith@example.com",
+        "age": 25,
+        "city": "Los Angeles"
     },
     {
-        "name": "Prakash Gurung",
-        "email": "PrakashGurung789@gmail.com"
+        "name": "Alice Brown",
+        "email": "alicebrown@example.com",
+        "age": 28,
+        "city": "Chicago"
     },
     {
-        "name": "Manish Thapa",
-        "email": "ManishThapa321@gmail.com"
+        "name": "Bob Johnson",
+        "email": "bobjohnson@example.com",
+        "age": 35,
+        "city": "Houston"
     },
     {
-        "name": "Sujata Tamang",
-        "email": "SujataTamang654@gmail.com"
+        "name": "Charlie Davis",
+        "email": "charliedavis@example.com",
+        "age": 32,
+        "city": "Phoenix"
     },
     {
-        "name": "Ramesh Chaudhary",
-        "email": "RameshChaudhary987@gmail.com"
+        "name": "Diana Evans",
+        "email": "dianaevans@example.com",
+        "age": 27,
+        "city": "Philadelphia"
     },
     {
-        "name": "Kriti Adhikari",
-        "email": "KritiAdhikari123@gmail.com"
+        "name": "Evan Foster",
+        "email": "evanfoster@example.com",
+        "age": 29,
+        "city": "San Antonio"
     },
     {
-        "name": "Sanjay Basnet",
-        "email": "SanjayBasnet456@gmail.com"
+        "name": "Fiona Green",
+        "email": "fionagreen@example.com",
+        "age": 26,
+        "city": "San Diego"
     },
     {
-        "name": "Aarati Khadka",
-        "email": "AaratiKhadka789@gmail.com"
+        "name": "George Harris",
+        "email": "georgeharris@example.com",
+        "age": 33,
+        "city": "Dallas"
     },
     {
-        "name": "Kiran Sharma",
-        "email": "KiranSharma321@gmail.com"
+        "name": "Hannah Johnson",
+        "email": "hannahjohnson@example.com",
+        "age": 24,
+        "city": "Austin"
     }
 ]
