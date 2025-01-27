@@ -55,5 +55,14 @@ class StudentController extends Controller
         }
     }
 
+    // for delete
+    public function deleteStudent(string $id) {
+        $student = DB::table('students')
+                      ->where('id', $id)
+                      ->delete();
+
+        return redirect('/');
+    }
+
 
 }
