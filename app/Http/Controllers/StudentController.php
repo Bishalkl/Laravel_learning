@@ -19,4 +19,41 @@ class StudentController extends Controller
         $students = DB::table('students')->where('id', $id)->get();
         return view('singleStudents', ['data' => $students]);
     }
+
+    public function addStudent(){
+        $student = DB::table('students')
+                     ->upsert(
+                        [
+                            "name" => "Another Komal",
+                            "email" => "anotheruser@example.com",
+                            "age" => 23,
+                            "city" => "Mumbai",
+                        ],
+                        ['email'],
+                        ['city']
+                     );
+
+        if($student) {
+            echo "<h1>Data Successfully Added.</h1>";
+        } else {
+            echo "<h1>Data not Added</h1>";
+        }
+    }
+
+    public function updateStudent() {
+        $student = DB::table('students')
+                      ->where('id', 1)
+                      ->update([
+                          'city' => 'Khorsane',
+                      ]);
+
+
+        if($student) {
+            echo "<h1>Data is updated succesfully.</h1>";
+        } else {
+            echo "<h1>Data is not updated.</h1>";
+        }
+    }
+
+
 }

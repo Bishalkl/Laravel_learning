@@ -9,3 +9,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [StudentController::class, 'showStudents']);
 Route::get('/students/{id}', [StudentController::class, 'singleStudents'])->name('view.students');
+Route::get('/add', [StudentController::class, 'addStudent']);
+Route::get('/update', [StudentController::class, 'updateStudent']);
