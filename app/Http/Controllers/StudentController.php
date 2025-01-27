@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class StudentController extends Controller
@@ -40,20 +38,20 @@ class StudentController extends Controller
         }
     }
 
-    public function updateStudent() {
-        $student = DB::table('students')
-                      ->where('id', 1)
-                      ->update([
-                          'city' => 'Khorsane',
-                      ]);
+    // public function updateStudent() {
+    //     $student = DB::table('students')
+    //                   ->where('id', 1)
+    //                   ->update([
+    //                       'city' => 'Khorsane',
+    //                   ]);
 
 
-        if($student) {
-            echo "<h1>Data is updated succesfully.</h1>";
-        } else {
-            echo "<h1>Data is not updated.</h1>";
-        }
-    }
+    //     if($student) {
+    //         echo "<h1>Data is updated succesfully.</h1>";
+    //     } else {
+    //         echo "<h1>Data is not updated.</h1>";
+    //     }
+    // }
 
     // for delete
     public function deleteStudent(string $id) {
@@ -61,7 +59,9 @@ class StudentController extends Controller
                       ->where('id', $id)
                       ->delete();
 
-        return redirect('/');
+        if($student) {
+            return redirect()->route('home');
+        }
     }
 
 
